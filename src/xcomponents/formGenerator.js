@@ -1,12 +1,11 @@
 import xcomponent from '../../node_modules/xcomponent/dist/xcomponent';
 
 window.LuxorFormGeneratorComponenet = xcomponent.create({
-    
     // The html tag used to render my component 
     tag: 'luxor-form-generator',
  
     // The url that will be loaded in the iframe or popup, when someone includes my component on their page 
-    url: 'http://localhost:8080/index.html',
+    url: document.currentScript.src.replace(/[^\/]+$/, 'page.html'),
  
     // The size of the component on their page 
     dimensions: {
