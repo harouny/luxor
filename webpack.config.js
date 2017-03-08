@@ -15,7 +15,8 @@ module.exports = {
         {
             template: './src/componentHosts/formGenerator.html',
             inject: 'body',
-            chunks: ['dist/common','dist/formGeneratorHost']
+            chunks: ['dist/common','dist/formGeneratorHost'],
+            filename: 'dist/formGeneratorHost/index.html',
         }
     ),
     new webpack.optimize.CommonsChunkPlugin('dist/common'),
