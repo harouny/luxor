@@ -1,0 +1,30 @@
+{
+  "name": "luxor",
+  "version": "1.0.0",
+  "description": "luxor is a cross browser from generation software as a service",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.2",
+    "babel-preset-env": "^1.2.0",
+    "babel-preset-react": "^6.23.0",
+    "css-loader": "^0.26.2",
+    "html-webpack-plugin": "^2.28.0",
+    "style-loader": "^0.13.2",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1"
+  },
+  "dependencies": {
+    "material-ui": "^0.17.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-schema-form": "^0.3.2",
+    "react-schema-form-rc-select": "^0.2.0",
+    "xcomponent": "^1.0.122"
+  }
+}
