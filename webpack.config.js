@@ -3,8 +3,8 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: { 
-        'dist/formGenerator/page': './src/pages/formGenerator/formGenerator.js',
-        'dist/formGenerator/definition': './src/xcomponents/formGenerator.js'
+        'dist/formGenerator/page': './src/pages/formGenerator/page.js',
+        'dist/formGenerator/xcomponent': './src/xcomponents/formGenerator.js'
     },
     output: {
         filename: "[name].bundle.js",
@@ -13,7 +13,7 @@ module.exports = {
     plugins: [
     new HtmlWebpackPlugin(
         {
-            template: './src/pages/formGenerator/formGenerator.html',
+            template: './src/pages/formGenerator/page.html',
             inject: 'body',
             chunks: ['dist/common','dist/formGenerator/page'],
             filename: 'dist/formGenerator/page.html',
@@ -31,7 +31,7 @@ module.exports = {
                 presets: ['env','react']
                 }
             },
-            { test: /\.css$/, loader: "style-loader!css-loader" }
+            {test: /\.css?$/, exclude: /node_modules/, loader: "style-loader!css-loader"},
         ]
     },
     devServer: {

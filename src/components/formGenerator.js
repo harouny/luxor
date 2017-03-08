@@ -1,6 +1,7 @@
 import React from 'react';
 import {SchemaForm} from 'react-schema-form';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+require('style-loader!css-loader!rc-select/assets/index.css');
 import RcSelect from 'react-schema-form-rc-select/lib/RcSelect';
 
 const defaultProps = {
