@@ -2,9 +2,8 @@
 
 Start in development mode:
 
-  npm install
-
-  webpack-dev-server
+    npm install
+    webpack-dev-server
 
 Usage example:
 
