@@ -21,7 +21,7 @@ window.LuxorFormGeneratorComponenet = xcomponent.create({
         },
         form: {
             type: 'object',
-            required: false
+            required: true
         },
         model: {
             type: 'object',
