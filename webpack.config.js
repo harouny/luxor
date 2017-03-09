@@ -3,12 +3,16 @@ var webpack = require('webpack');
 
 module.exports = {
     entry: { 
+        //formGenerator
         'dist/formGenerator/page': './src/pages/formGenerator/page.js',
-        'dist/formGenerator/xcomponent': './src/xcomponents/formGenerator.js'
+        'dist/formGenerator/xcomponent': './src/xcomponents/formGenerator.js',
+        //gravatar
+        'dist/gravatar/page': './src/pages/gravatar/page.js',
+        'dist/gravatar/xcomponent': './src/xcomponents/gravatar.js',
     },
     output: {
         filename: "[name].bundle.js",
-        chunkFilename: "[id].chunk.js"
+        chunkFilename: "[id].chunk.js",
     },
     plugins: [
     new HtmlWebpackPlugin(
@@ -17,6 +21,14 @@ module.exports = {
             inject: 'body',
             chunks: ['dist/common','dist/formGenerator/page'],
             filename: 'dist/formGenerator/page.html',
+        }
+    ),
+    new HtmlWebpackPlugin(
+        {
+            template: './src/pages/gravatar/page.html',
+            inject: 'body',
+            chunks: ['dist/common','dist/gravatar/page'],
+            filename: 'dist/gravatar/page.html',
         }
     ),
     new webpack.optimize.CommonsChunkPlugin('dist/common'),
