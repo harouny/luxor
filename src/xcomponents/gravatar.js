@@ -19,6 +19,10 @@ window.LuxorGravatarComponenet = xcomponent.create({
             type: 'string',
             required: true
         },
+        size: {
+            type: 'number',
+            required: false
+        },
         getEmailAsync: {
             type: 'function',
             required: false
