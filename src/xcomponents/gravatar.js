@@ -23,7 +23,7 @@ window.LuxorGravatarComponenet = xcomponent.create({
             type: 'number',
             required: false
         },
-        getEmailAsync: {
+        changeEmail: {
             type: 'function',
             required: false
         }

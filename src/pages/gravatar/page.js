@@ -5,5 +5,5 @@ import '../../xcomponents/gravatar';
 
 const xchildProps = window.xchild ? window.xchild.props : {};
 
-ReactDOM.render(<Gravatar email={xchildProps.email} size={xchildProps.size} />, 
+ReactDOM.render(<Gravatar email={xchildProps.email} size={xchildProps.size} changeEmail={xchildProps.changeEmail} />, 
 document.getElementsByTagName('gravatar')[0]);
