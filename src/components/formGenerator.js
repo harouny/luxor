@@ -7,65 +7,41 @@ import RcSelect from 'react-schema-form-rc-select/lib/RcSelect';
 const defaultProps = {
     schema: {
             "type": "object",
-            "title": "Update Access Control",
+            "title": "Contact Information",
             "required": [
                 "accessLevel"
             ],
             "properties": {
                 "name": {
-                "title": "Name",
-                "type": "string"
+                    "title": "Name",
+                    "type": "string"
                 },
-                "accessLevel": {
-                "title": "Access Level",
-                "type": "array",
-                "items": [
-                    {
-                    "value": "A",
-                    "label": "Authorized to anyone"
-                    },
-                    {
-                    "value": "N",
-                    "label": "Not Accessible"
-                    },
-                    {
-                    "value": "C",
-                    "label": "Client Based"
-                    },
-                    {
-                    "value": "R",
-                    "label": "Role Based"
-                    },
-                    {
-                    "value": "U",
-                    "label": "User Based"
-                    },
-                    {
-                    "value": "CR",
-                    "label": "Client and Role Based"
-                    },
-                    {
-                    "value": "CU",
-                    "label": "Client and User Based"
-                    },
-                    {
-                    "value": "RU",
-                    "label": "Role and User Based"
-                    },
-                    {
-                    "value": "CRU",
-                    "label": "Client, Role and User Based"
-                    }
-                ]
+                "title": {
+                    "title": "Title",
+                    "type": "array",
+                    "items": [
+                            {
+                            "value": "miss",
+                            "label": "Miss"
+                            },
+                            {
+                            "value": "Mr",
+                            "label": "mr"
+                            },
+                    ]
+                },
+                "email":{
+                    "type": "string",
+                    "title": "Email"
                 }
             }
         },
     form: [
         "name",
         {
-            "key": "accessLevel",
+            "key": "title",
             "type": "rc-select",
-            "multiple": true
+            "multiple": false
         }],
     model: {},
     onModelChange: function (name, value){

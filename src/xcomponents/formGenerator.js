@@ -9,19 +9,19 @@ window.LuxorFormGeneratorComponenet = xcomponent.create({
  
     // The size of the component on their page 
     dimensions: {
-        width: 400,
-        height: 400
+        width: '400px',
+        height: '400px'
     },
  
     // The properties they can (or must) pass down to my component 
     props: {
         schema: {
             type: 'object',
-            required: true
+            required: false
         },
         form: {
             type: 'object',
-            required: true
+            required: false
         },
         model: {
             type: 'object',

@@ -9,6 +9,9 @@ module.exports = {
         //gravatar
         'dist/gravatar/page': './src/pages/gravatar/page.js',
         'dist/gravatar/xcomponent': './src/xcomponents/gravatar.js',
+        //product gallery
+        'dist/productGallery/page': './src/pages/productGallery/page.js',
+        'dist/productGallery/xcomponent': './src/xcomponents/productGallery.js',
     },
     output: {
         filename: "[name].bundle.js",
@@ -29,6 +32,14 @@ module.exports = {
             inject: 'body',
             chunks: ['dist/common','dist/gravatar/page'],
             filename: 'dist/gravatar/page.html',
+        }
+    ),
+    new HtmlWebpackPlugin(
+        {
+            template: './src/pages/productGallery/page.html',
+            inject: 'body',
+            chunks: ['dist/common','dist/productGallery/page'],
+            filename: 'dist/productGallery/page.html',
         }
     ),
     new webpack.optimize.CommonsChunkPlugin('dist/common'),

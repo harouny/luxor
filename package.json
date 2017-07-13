@@ -26,8 +26,9 @@
     "material-ui": "^0.17.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-grid-gallery": "^0.4.0",
     "react-schema-form": "^0.3.2",
     "react-schema-form-rc-select": "^0.2.0",
-    "xcomponent": "^1.0.122"
+    "xcomponent": "^3.0.0"
   }
 }
