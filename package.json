@@ -20,7 +20,8 @@
     "jquery": "^3.2.1",
     "style-loader": "^0.13.2",
     "webpack": "^2.2.1",
-    "webpack-dev-server": "^2.4.1"
+    "webpack-dev-server": "^2.4.1",
+    "xcomponent": "^3.0.14"
   },
   "dependencies": {
     "es-md5": "^2.7.2",

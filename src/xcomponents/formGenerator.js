@@ -9,7 +9,7 @@ window.LuxorFormGeneratorComponenet = xcomponent.create({
  
     // The size of the component on their page 
     dimensions: {
-        width: '400px',
+        width: '100%',
         height: '400px'
     },
  
