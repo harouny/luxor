@@ -8,11 +8,14 @@ class Gravatar extends React.Component {
         const size = props.size || 200;
         const hashedEmail = md5(email);
         this.state = { 
-            gravatarSrc: '//www.gravatar.com/avatar/' + hashedEmail + '?s=' + size,
+            gravatarSrc: '//www.gravatar.com/avatar/' + hashedEmail + '?s=' + size + '&d=identicon',
             changeEmail: props.changeEmail,
             size: size
         };
         this.changeImage = this.changeImage.bind(this);
+        this.style = {
+            cursor: 'hand',
+        }
     }
 
     changeImage(){
@@ -22,7 +25,7 @@ class Gravatar extends React.Component {
             {
                 const hashedEmail = md5(newEmail);
                 this.setState(prevState => ({
-                    gravatarSrc: '//www.gravatar.com/avatar/' + hashedEmail + '?s=' + this.state.size
+                    gravatarSrc: '//www.gravatar.com/avatar/' + hashedEmail + '?s=' + this.state.size + '&d=identicon'
                 }));
             }
         });
@@ -30,7 +33,7 @@ class Gravatar extends React.Component {
     }
 
     render() {
-        return <img onClick={this.changeImage} src={ this.state.gravatarSrc } />;
+        return <img style={this.style} onClick={this.changeImage} src={ this.state.gravatarSrc } />;
     }
 }
 
